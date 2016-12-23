@@ -9,16 +9,16 @@ body{
 }
 
 ::selection {
-		background: #000;
-		color: #fff;
-		text-shadow: none;
-	}
-	
-	::-moz-selection {
-		background: #000;
-		color: #fff;
-		text-shadow: none;
-	}
+    background: #000;
+    color: #fff;
+    text-shadow: none;
+  }
+  
+  ::-moz-selection {
+    background: #000;
+    color: #fff;
+    text-shadow: none;
+  }
 
 p{
   font-family: 'Raleway', sans-serif;
@@ -29,11 +29,11 @@ p{
 a{
   text-decoration:none;
   -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in; 
-	border-bottom:1px solid #dedede;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; 
+  border-bottom:1px solid #dedede;
 }
 
 a:focus {
@@ -181,10 +181,10 @@ header.boxed{
   background:none;
   top:0;
     -webkit-transition: background 0.2s ease-in;
-	-moz-transition: background 0.2s ease-in;
-	-ms-transition: background 0.2s ease-in;
-	-o-transition: background 0.2s ease-in;
-	transition: background 0.2s ease-in; 
+  -moz-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in; 
 }
 
 header.boxed .header-margin{
@@ -366,6 +366,12 @@ CONTENT
   position:relative;
   width:1140px;
   margin:50px auto;
+  font-size:13px;
+  color:#8d8d8d;
+  margin-top:30px;
+  font-weight:400;
+  line-height:22px;
+  letter-spacing:1px
 }
 
 
@@ -524,10 +530,10 @@ li.grid-item{
   z-index: 2;
   opacity: 0;
   -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in; 
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; 
 }
 
 .grid-hover:hover{
@@ -693,10 +699,12 @@ textarea{
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
     -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in; 
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; 
 }
 
 textarea:focus{background:#f4f4f4; height:250px;}
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
