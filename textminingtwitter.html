@@ -1,0 +1,180 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Text Mining Analysis | Trump vs. Obama</title>
+  <meta name="description" content="Olin College of Engineering, Babson College ">
+  <meta name="keywords" content="gee, tech, design, product design, technology, christina gee">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="thomsoon.com">
+  <link rel="icon" type="image/png" href="img/icon.png" />
+
+<!--Style-->
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-responsive.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+</head>
+
+<body>
+
+<!--Preloader-->
+
+<div class="opacity-nav">
+
+    <ul class="menu-fullscreen">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">Projects</a></li>
+      <li><a href="about-us.html">About</a></li>
+      <li><a href="https://wordpress.com/posts/christinargee.wordpress.com">Writing</a></li>
+    </ul>
+
+</div>
+
+
+  <!--Header-->
+<header class="boxed" id="header-white">
+
+  <div class="header-margin">
+  
+    <div class="logo"><a class="ajax-link" href="index.html">CHRISTINA GEE</a></div>
+    <ul class="header-nav">
+      <li><a href="index.html">Projects</a>
+          <!--<ul>
+ ### YOU WOULD PUT STUFF HERE <li><a href="projects.html">Projects</a></li> 
+          <li><a href="single.html">Single project</a></li> 
+          <li><a href="single-full.html">Single project fullscreen</a></li> 
+                   
+        </ul>-->
+      
+      </li>
+      
+      <li><a href="about-me.html">About me</a></li>
+      <li><a href="http://christinargee.wordpress.com">Writing</a></li>
+    </ul>
+    
+
+</header>
+  <!--Content-->
+
+  <div class="content" id="ajax-content">
+
+
+        <div class="text-intro">
+
+          <h1>Text Mining Obama vs. Trump Tweets</h1>
+
+
+		        <div class="content">
+            <strong>About the Project:</strong>
+            <p>Since Donald Trump’s inauguration as President, there had been a lot of commentary on the difference between President Trump and Obama. Coming from a liberal school I had primarily heard positive sentiment about Obama and negative sentiment about Trump, but I wanted to compare how this sentiment differed from a collection of people across the world on Twitter. For my project I used Twython which uses Twitter’s API and collected 100 tweets about each candidate. With this data, I found the most commonly used words when people tweeted about Trump and Obama and the positivity/negativity sentiment associated with these presidents. Check out my <a href="https://github.com/christinagee/TextMining">github repo</a>. 
+
+              </div> 
+
+            <div class="content">  
+              <h1>Implementation</h1>
+              <p>I used pickle to help scrape the data off the web and created two queries for Trump using his Twitter handle @theRealDonaldTrump and Obama’s handle @BarackObama.As part of scraping data of the web, I wanted to clean it by removing symbols, punctuation, stop words and white spaces. Slang words were also remove to help with the accuracy of the sentiment analysis and I imported an Oxford dictionary .txt file to ensure the words in the Tweets are legitimate. Finally, I used the Lancaster stem program to help extract only the root of the word. In doing so, we would be able to better count the number of times words were used in a tweet. Without Lancaster words with –ing or –ed would be two separate words such as “loving” or “loved.” Stem caster eliminates these types of words in Tweets so that you can count the core words.</p>
+              
+              <p>To analyze our data, I first wanted to look at the frequency of each word by creating a dictionary histogram of the words. The keys were unique words that appeared in the collected tweets and the values were the frequencies of each word. I then created a function to show the 10 most frequently occurring words in each dictionary (Obama and Trump).</p>
+              
+              <p>To analyze the positivity/negativity sentiment of these two candidates, I used the NLTK Vader sentiment analyzer which collected a summary sentiment for each tweet and scored it on a scale from 0 to 1 and then gave me the average of the positive and negative sentiment overall. As a way to compare the two, I used a scatter plot on matplotlib to illustrate the difference.  The graph was made by using a loop to iterate through each tweet, determining its sentiment score and appending each score to a list of dictionaries.</p>
+
+            <div class="content">  
+              <h1>Results</h1>
+              <br>When I returned the 10 most common words in the tweets I got the following results:<br>
+              <p><img src="img/portfolio/textminingtwitter/commonobama.png" width =70%></p>
+              <p><img src="img/portfolio/textminingtwitter/commontrump.png" width=70%></p>
+              <br>
+              <p>In both Obama and Trump tweets they share the common words “presid”, “like” and “right.” The word “president” or “presidency” makes sense in this context, but it is interesting that the word “right” and “like” is used. It is unclear if the word “like” is used for a simile comparison or in terms of favoring or “liking” a particular candidate. However, we can tell from the average positivity and negativity analysis that Obama is the more favored president where he received more positivity in his tweets and less negativity in his tweets than Trump’s.</p>
+              <p><img src=img/portfolio/textminingtwitter/sentiment.png width=70%></p>
+              <br>
+              <p>The code I created was able to computes the the average positivity and negativity tweets and also illustrates the tweet number with its positivity/negativity score.</p>
+              <br>
+              <p><img src="img/portfolio/textminingtwitter/PositiveAnalysis.png" width=50%></p>
+              <p><img src="img/portfolio/textminingtwitter/NegativityAnalysis.png" width=50%></p>
+              <br>
+              <p>Interestingly, Trump received 2x more negativity in his tweets than Obamas, and Obama received nearly 2x more positivity in his tweets than Trump. Yet it is unclear if there is correlation with the people who are tweeting positive things about Obama are also tweeting negative things about. Another interesting observation about the Positivity Analysis graph is how the curve of both Obama and Trump appear to be the same shape in the beginning but towards the end Obama tweets start to see a much higher positivity score than Trump. For the straight line on both graphs, these were tweets that received a negativity and positivity score of 0, which meant that they were neutral – there were no words included in the text that revealed whether the user favored or disliked another candidate. </p>
+              <br>
+              <p><strong>Reflection: </strong>From a learning point of view, there was a steep learning curve since we were given no templates on how to format a text mining project. I learned that you had to have a web scraping python page separate from the data cleaning (tokenization) and analysis page. I feel like I developed a much better understanding of how dictionaries work in Python as a result of this project and how to protect my consumer key and access token. If I were to do this project again or had more time, I would have liked to included a part that analyzed whether the positive or negative tweets correlated to specific political parties using Indico’s API.</p>
+
+                    </div>
+                    </div>
+
+				  
+                </p> 				        
+				        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				        
+				        
+        
+        
+					        <div class="prev-next">
+					        
+					          <div class="prev-button"><a href="sustdesign.html">Previous work</a></div>
+					          <div class="next-button"><a href="collegeindex.html">Next work</a></div>
+					
+					        </div>
+            </div>
+        
+    </div>
+
+
+
+  <!--Home Sidebar-->
+
+<div id="ajax-sidebar"></div>
+
+
+
+  <!--Footer-->
+
+  <footer>
+
+    <div class="footer-margin">
+      <div class="social-footer">
+        <a href="https://www.facebook.com/cgee123"><i class="fa fa-facebook"></i></a>
+        <a href="https://wordpress.com/posts/christinargee.wordpress.com"><i class="fa fa-wordpress"></i></a>
+        <a href="https://www.twitter.com/christinagee12"><i class="fa fa-twitter"></i></a>
+      </div>
+      
+      </div>     
+      <div class="copyright">Site created by Christina Gee </div>
+      
+
+    
+    </div>
+
+
+  </footer>
+
+
+<!--Scripts-->
+
+  <script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/modernizr.custom.42534.js" type="text/javascript"></script>
+  <script src="js/jquery.waitforimages.js" type="text/javascript"></script>
+  <script src="js/typed.js" type="text/javascript"></script>
+  <script src="js/masonry.pkgd.min.js" type="text/javascript"></script>  
+  <script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>    
+  <script src="js/jquery.jkit.1.2.16.min.js"></script>
+ 
+  <script src="js/script.js" type="text/javascript"></script>
+  
+	<script>
+    $('#button, #buttons').on('click', function() {
+      $( ".opacity-nav" ).fadeToggle( "slow", "linear" );
+    // Animation complete.
+    });
+  </script>
+
+
+</body>
+</html>
