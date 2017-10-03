@@ -1,0 +1,175 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title> What Makes News Popular? | Analysis using R Programming</title>
+  <meta name="description" content="Olin College of Engineering, Babson College ">
+  <meta name="keywords" content="gee, tech, design, product design, technology, christina gee">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="thomsoon.com">
+  <link rel="icon" type="image/png" href="img/icon.png" />
+
+<!--Style-->
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-responsive.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+</head>
+
+<body>
+
+<!--Preloader-->
+
+<div class="opacity-nav">
+
+    <ul class="menu-fullscreen">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">Projects</a></li>
+      <li><a href="about-us.html">About</a></li>
+      <li><a href="https://wordpress.com/posts/christinargee.wordpress.com">Writing</a></li>
+    </ul>
+
+</div>
+
+
+  <!--Header-->
+<header class="boxed" id="header-white">
+
+  <div class="header-margin">
+  
+    <div class="logo"><a class="ajax-link" href="index.html">CHRISTINA GEE</a></div>
+    <ul class="header-nav">
+      <li><a href="index.html">Projects</a>
+          <!--<ul>
+ ### YOU WOULD PUT STUFF HERE <li><a href="projects.html">Projects</a></li> 
+          <li><a href="single.html">Single project</a></li> 
+          <li><a href="single-full.html">Single project fullscreen</a></li> 
+                   
+        </ul>-->
+      
+      </li>
+      
+      <li><a href="about-me.html">About me</a></li>
+      <li><a href="http://christinargee.wordpress.com">Writing</a></li>
+    </ul>
+    
+
+</header>
+  <!--Content-->
+
+  <div class="content" id="ajax-content">
+
+
+        <div class="text-intro">
+          <h1>Online News Popularity: R-Programming Analysis</h1>
+
+		        <div class="content">
+            <strong>About the Project:</strong>
+            <p>For my Quantatative Analytics course we found a Mashable data set that dealt with discerning the popularity of online news. We wanted to use this dataset to identify the key variables that contribute to news popularity and ultimately create a model that can predict the accuracy of news popularity. The focus of this project centered around identifying the most relevant variables that contribute to news popularity, figuring out the “best” models to predict online popularity, testing these models and refining them accordingly. Using R our team created three different models: A Regression Tree, A KNN Model and a Logistics Model. 
+
+              </div> 
+
+            <div class="content">  
+              <h1>Models</h1>
+              <p><strong>Classification Tree:</p>  Based on our Classification Tree, it is hard to pinpoint the exact combination of variables to ensure a popular article. However, we identified that some of variables that kept reappearing were telling us that popular articles were less likely to be a world and/or entertainment article and would be even less likely if published on a weekend. When we built our code, we converted several variables such as “weekday_is_friday” or “data_channel_is_lifestyle” to factors since they provide binary answers. 
+
+
+            <div class="content">  
+              <h1>Results</h1>
+              <br>When I returned the 10 most common words in the tweets I got the following results:<br>
+              <p><img src="img/portfolio/textminingtwitter/commonobama.png" width =70%></p>
+              <p><img src="img/portfolio/textminingtwitter/commontrump.png" width=70%></p>
+              <br>
+              <p>In both Obama and Trump tweets they share the common words “presid”, “like” and “right.” The word “president” or “presidency” makes sense in this context, but it is interesting that the word “right” and “like” is used. It is unclear if the word “like” is used for a simile comparison or in terms of favoring or “liking” a particular candidate. However, we can tell from the average positivity and negativity analysis that Obama is the more favored president where he received more positivity in his tweets and less negativity in his tweets than Trump’s.</p>
+              <p><img src=img/portfolio/textminingtwitter/sentiment.png width=70%></p>
+              <br>
+              <p>The code I created was able to computes the the average positivity and negativity tweets and also illustrates the tweet number with its positivity/negativity score.</p>
+              <br>
+              <p><img src="img/portfolio/textminingtwitter/PositiveAnalysis.png" width=50%></p>
+              <p><img src="img/portfolio/textminingtwitter/NegativityAnalysis.png" width=50%></p>
+              <br>
+              <p>Interestingly, Trump received 2x more negativity in his tweets than Obamas, and Obama received nearly 2x more positivity in his tweets than Trump. Yet it is unclear if there is correlation with the people who are tweeting positive things about Obama are also tweeting negative things about. Another interesting observation about the Positivity Analysis graph is how the curve of both Obama and Trump appear to be the same shape in the beginning but towards the end Obama tweets start to see a much higher positivity score than Trump. For the straight line on both graphs, these were tweets that received a negativity and positivity score of 0, which meant that they were neutral – there were no words included in the text that revealed whether the user favored or disliked another candidate. </p>
+              <br>
+              <p><strong>Reflection: </strong>From a learning point of view, there was a steep learning curve since we were given no templates on how to format a text mining project. I learned that you had to have a web scraping python page separate from the data cleaning (tokenization) and analysis page. I feel like I developed a much better understanding of how dictionaries work in Python as a result of this project and how to protect my consumer key and access token. If I were to do this project again or had more time, I would have liked to included a part that analyzed whether the positive or negative tweets correlated to specific political parties using Indico’s API.</p>
+
+                    </div>
+                    </div>
+
+				  
+                </p> 				        
+				        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				        
+				        
+        
+        
+					        <div class="prev-next">
+					        
+					          <div class="prev-button"><a href="sustdesign.html">Previous work</a></div>
+					          <div class="next-button"><a href="uocd.html">Next work</a></div>
+					
+					        </div>
+            </div>
+        
+    </div>
+
+
+
+  <!--Home Sidebar-->
+
+<div id="ajax-sidebar"></div>
+
+
+
+  <!--Footer-->
+
+  <footer>
+
+    <div class="footer-margin">
+      <div class="social-footer">
+        <a href="https://www.facebook.com/cgee123"><i class="fa fa-facebook"></i></a>
+        <a href="https://wordpress.com/posts/christinargee.wordpress.com"><i class="fa fa-wordpress"></i></a>
+        <a href="https://www.twitter.com/christinagee12"><i class="fa fa-twitter"></i></a>
+      </div>
+      
+      </div>     
+      <div class="copyright">Site created by Christina Gee </div>
+      
+
+    
+    </div>
+
+
+  </footer>
+
+
+<!--Scripts-->
+
+  <script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/modernizr.custom.42534.js" type="text/javascript"></script>
+  <script src="js/jquery.waitforimages.js" type="text/javascript"></script>
+  <script src="js/typed.js" type="text/javascript"></script>
+  <script src="js/masonry.pkgd.min.js" type="text/javascript"></script>  
+  <script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>    
+  <script src="js/jquery.jkit.1.2.16.min.js"></script>
+ 
+  <script src="js/script.js" type="text/javascript"></script>
+  
+	<script>
+    $('#button, #buttons').on('click', function() {
+      $( ".opacity-nav" ).fadeToggle( "slow", "linear" );
+    // Animation complete.
+    });
+  </script>
+
+
+</body>
+</html>
