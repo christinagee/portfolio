@@ -32,7 +32,7 @@
 
     <ul class="menu-fullscreen">
       <li><a href="index.html">Home</a></li>
-      <li><a href="index.html">Projects</a></li>
+      <li><a href="projects.html">Projects</a></li>
       <li><a href="about-us.html">About</a></li>
       <li><a href="https://wordpress.com/posts/christinargee.wordpress.com">Writing</a></li>
     </ul>
@@ -45,9 +45,9 @@
 
   <div class="header-margin">
 
-    <div class="logo"><a class="ajax-link" href="index.html">CHRISTINA GEE</a></div>
+    <div class="logo"><a href="index.html">CHRISTINA GEE</a></div>
     <ul class="header-nav">
-      <li><a href="index.html">Projects</a>
+      <li><a href="projects.html">Projects</a>
           <!--<ul>
  ### YOU WOULD PUT STUFF HERE <li><a href="projects.html">Projects</a></li>
           <li><a href="single.html">Single project</a></li>
@@ -68,129 +68,80 @@
 
   <!--Content-->
 
-  <div class="content" id="ajax-content">
-        <div class="text-intro" id="site-type">
 
-          <h1>A quick glance at my</h1>
-          <h1 class="typewrite"><span>Portfolio</span></h1>
-          <p>A collection of interface designs</p>
-
-        </div></div>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet" type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Nixie+One:400,700" rel="stylesheet" type='text/css'>
+    <link rel = "stylesheet" href = "styles/home.css" type = "text/css" />
 
 
-  <!--Portfolio grid-->
+    <!--load javascript for fade in effect-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("body").css("display", "none");
+          });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("body").css("display", "none");
+          $("body").fadeIn(2000);
+          });
+    </script>
 
-  <ul class="portfolio-grid">
 
+    <script src="js/typed.js" type="text/javascript"></script>
+    <script>
+      $(function(){
+      $(".nouns").typed({
+      strings: ["nutella", "seattle", "women empowerment", "product mangement", "whisking matcha","hiking","acai bowls"],
+      typeSpeed: 0,
+      showCursor: false,
+      loop: true,
+      loopCount: false,
+      backDelay: 1000,
+      });
+      });
+    </script>
 
-    <li class="grid-item">
-      <img src="img/portfolio/wedoboth.png">
-        <a href="single.html">
-          <div class="grid-hover">
-            <h1>WEDO</h1>
-            <p>Wedding planner app</p>
-          </div>
-        </a>
-    </li>
+      <div class="content" id="ajax-content">
+            <div class="text-intro" id="site-type">
+              <h2> <img src= "img/emojis/fireemoji.png" width=16px height=16px>  Currently <br></h2>
+              data program manager <a class="social" STYLE="text-decoration:none" target="_blank" href="http://www.microsoft.com">Microsoft</a> Windows
 
-    <li class="grid-item">
-      <img src="img/portfolio/IPD/ipd10.png">
-        <a href="ipd.html">
-          <div class="grid-hover">
-            <h1>IOT Sensors</h1>
-            <p>Water Contamination Sensors</p>
-          </div>
-        </a>
-    </li>
+              <h2> <img src= "img/emojis/highfiveemoji.png" width=16px height=16px>  Previously <br></h2>
+              Azure product marketing manager <a class="social" STYLE="text-decoration:none" target="_blank" href="http://www.microsoft.com">Microsoft</a><br>
+              product marketing <a class="social" STYLE="text-decoration:none" target = "_blank" href="http://www.xbox.com">Xbox</a><br>
+              & product management <a class="social" STYLE="text-decoration:none" target="_blank" href="http://www.monster.com">Monster Worldwide</a> <br>
 
-    <li class="grid-item">
-      <img src="img/portfolio/hackysack/hackysack.png">
-         <a href="hackysack.html">
-          <div class="grid-hover">
-            <h1>HackySack</h1>
-            <p>App for Hackathon Teams</p>
-          </div>
-        </a>
-    </li>
+              <h2><img src= "img/emojis/pinkheartsemoji.png" width=16px height=16px>  Likes<br></h2>
+              <span class="nouns"></span><br>
 
-    <li class="grid-item">
-      <img src="img/portfolio/UOCD/uocd2.png">
-        <a href="uocd.html">
-          <div class="grid-hover">
-            <h1>FOODCENTS</h1>
-            <p>Human Center Design Research</p>
-          </div>
-        </a>
-    </li>
+              <h2><img src= "img/emojis/pencilemoji.png" width=16px height=16px>  Writing<br></h2>
+              <a class="twosocial" style="text-decoration:none" href=writing.htmll>Coming Soon...</a>
 
-    <li class="grid-item">
-      <img src="img/portfolio/collegeindex/collegeindex1.png">
-        <a href="collegeindex.html">
-          <div class="grid-hover">
-            <h1>College Index</h1>
-            <p>Hackathon Project</p>
-          </div>
-        </a>
-    </li>
+              <h2><img src= "img/emojis/worldemoji.png" width=16px height=16px>  Internet<br></h2>
+              <a class="twosocial" STYLE="text-decoration:none" target="_blank" href="https://twitter.com/christinagee12/">tweets</a> /
+              <a class="twosocial" STYLE="text-decoration:none" target="_blank" href="https://github.com/christinagee">code</a> /
+              <a class="twosocial" STYLE="text-decoration:none" target="_blank" href="http://www.linkedin.com/in/geechristina">linkedIn</a>
 
-    <li class="grid-item">
-      <img src="img/portfolio/sharktoy/sharktoy14.jpg">
-        <a href="sharktoy.html">
-          <div class="grid-hover">
-            <h1>Shark Toy</h1>
-            <p>Building a toy for 4th graders</p>
-          </div>
-        </a>
-    </li>
-
-       <li class="grid-item">
-      <img src="img/portfolio/hopper/hopper6.jpg">
-        <a href="hopper.html">
-          <div class="grid-hover">
-            <h1>Hopper Project</h1>
-            <p>Bio-inspired product design</p>
-          </div>
-        </a>
-    </li>
-
-       <li class="grid-item">
-      <img src="img/portfolio/sustdesign/sustdesign3.jpg">
-        <a href="sustdesign.html">
-          <div class="grid-hover">
-            <h1>Nana Knowledge</h1>
-            <p>Re-designing breast feeding systems</p>
-          </div>
-        </a>
-    </li>
-
-    <li class="grid-item">
-      <img src="img/portfolio/lorealcasecomp/loreal7.png">
-        <a href="lorealcasecomp.html">
-          <div class="grid-hover">
-            <h1>L'Oreal Brandstorm</h1>
-            <p>USA National Finalist</p>
-          </div>
-        </a>
-    </li>
-
-    <li class="grid-item">
-      <img src="img/portfolio/textminingtwitter/PositiveAnalysis.png" width=120%>
-        <a href="textminingtwitter.html">
-          <div class="grid-hover">
-            <h1>Trump vs. Obama</h1>
-            <p>Twitter Text Mining Analysis</p>
-          </div>
-        </a>
-    </li>          
+              <h2><img src= "img/emojis/matchaemoji.png" width=16px height=16px>  Reach Out</h2>
+              email me: crgee12 [at] gmail [dot] com
 
 
 
+            </div>
 
-  </ul>
 
-  </div>
+    <div class="content" id="ajax-content">
 
-  <div id="ajax-sidebar"></div>
+          <div class="clear"></div>
+
+
+
+        </div>
+      </div>
+    </body>
 
   <!--Footer-->
 
@@ -199,7 +150,7 @@
     <div class="footer-margin">
       <div class="social-footer">
         <a href="https://www.linkedin.com/in/geechristina"><i class="fa fa-linkedin"></i></a>
-        <a href="https://wordpress.com/posts/christinargee.wordpress.com"><i class="fa fa-wordpress"></i></a>
+        <!--<a href="https://wordpress.com/posts/christinargee.wordpress.com"><i class="fa fa-wordpress"></i></a> -->
         <a href="https://www.twitter.com/christinagee12"><i class="fa fa-twitter"></i></a>
       </div>
 
@@ -223,7 +174,7 @@
   <script src="js/jquery.waitforimages.js" type="text/javascript"></script>
   <script src="js/typed.js" type="text/javascript"></script>
   <script src="js/masonry.pkgd.min.js" type="text/javascript"></script>
-  <script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>    
+  <script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
   <script src="js/jquery.jkit.1.2.16.min.js"></script>
 
   <script src="js/script.js" type="text/javascript"></script>
