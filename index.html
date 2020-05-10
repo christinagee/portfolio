@@ -23,24 +23,46 @@
   <![endif]-->
 
 </head>
-
 <body>
 
 <!--Preloader-->
 
+<div class="preloader" id="preloader">
+    <div class="item">
+      <div class="spinner">
+      </div>
+    </div>
+</div>
+
 <div class="opacity-nav">
+
+        <div class="menu-index" id="buttons" style="z-index:999999">
+        <i class="fa  fa-close"></i>
+        </div>
 
     <ul class="menu-fullscreen">
       <li><a href="index.html">Home</a></li>
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="about-us.html">About</a></li>
-      <li><a href="https://wordpress.com/posts/christinargee.wordpress.com">Writing</a></li>
+      <li><a href="about-me.html">About me</a></li>
     </ul>
 
 </div>
 
 
   <!--Header-->
+
+  <header id="fullscreen">
+
+      <div class="logo" id="full"><a class="ajax-link" href="index.html">CHRISTINA GEE</a></div>
+
+        <div class="menu-index" id="button">
+        <i class="fa fa-bars"></i>
+        </div>
+
+  </header>
+
+<!-- OLD SITE
+
 <header class="boxed" id="header-white">
 
   <div class="header-margin">
@@ -48,6 +70,21 @@
     <div class="logo"><a href="index.html">CHRISTINA GEE</a></div>
     <ul class="header-nav">
       <li><a href="projects.html">Projects</a>
+      </li>
+
+      <li><a href="about-me.html">About me</a></li>
+      <li><a href="http://christinargee.wordpress.com">Writing</a></li>
+    </ul>
+
+    <div class="menu-index" id="button">
+    <i class="fa fa-bars"></i>
+    </div>
+
+  </div>
+</header>
+
+<div class="clear"></div> --->
+
           <!--<ul>
  ### YOU WOULD PUT STUFF HERE <li><a href="projects.html">Projects</a></li>
           <li><a href="single.html">Single project</a></li>
@@ -55,20 +92,14 @@
 
         </ul>-->
 
-      </li>
-
-      <li><a href="about-me.html">About me</a></li>
-      <li><a href="http://christinargee.wordpress.com">Writing</a></li>
-    </ul>
-
-  </div>
-</header>
 
 <div class="clear"></div>
 
+
+
   <!--Content-->
 
-
+  <div class="content" id="ajax-content">
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet" type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Nixie+One:400,700" rel="stylesheet" type='text/css'>
@@ -94,7 +125,7 @@
     <script>
       $(function(){
       $(".nouns").typed({
-      strings: ["nutella", "seattle", "women empowerment", "product mangement", "whisking matcha","hiking","acai bowls"],
+      strings: ["boba", "skiing", "hand made cards", "product mangement", "whisking matcha","hiking","acai bowls"],
       typeSpeed: 0,
       showCursor: false,
       loop: true,
@@ -107,9 +138,10 @@
       <div class="content" id="ajax-content">
             <div class="text-intro" id="site-type">
               <h2> <img src= "img/emojis/fireemoji.png" width=16px height=16px>  Currently <br></h2>
-              data program manager <a class="social" STYLE="text-decoration:none" target="_blank" href="http://www.microsoft.com">Microsoft</a> Windows
+              product manager <a class="social" STYLE="text-decoration:none" target="_blank" href="http://www.affirm.com">Affirm</a>
 
               <h2> <img src= "img/emojis/highfiveemoji.png" width=16px height=16px>  Previously <br></h2>
+              Windows product manager <a class="social" STYLE="text-decoration:none" target="_blank" href="http://www.microsoft.com">Microsoft</a><br>
               Azure product marketing manager <a class="social" STYLE="text-decoration:none" target="_blank" href="http://www.microsoft.com">Microsoft</a><br>
               product marketing <a class="social" STYLE="text-decoration:none" target = "_blank" href="http://www.xbox.com">Xbox</a><br>
               & product management <a class="social" STYLE="text-decoration:none" target="_blank" href="http://www.monster.com">Monster Worldwide</a> <br>
@@ -126,22 +158,13 @@
               <a class="twosocial" STYLE="text-decoration:none" target="_blank" href="http://www.linkedin.com/in/geechristina">linkedIn</a>
 
               <h2><img src= "img/emojis/matchaemoji.png" width=16px height=16px>  Reach Out</h2>
-              email me: crgee12 [at] gmail [dot] com
+              email me: crgee12@gmail.com
 
 
 
             </div>
 
 
-    <div class="content" id="ajax-content">
-
-          <div class="clear"></div>
-
-
-
-        </div>
-      </div>
-    </body>
 
   <!--Footer-->
 
@@ -149,21 +172,15 @@
 
     <div class="footer-margin">
       <div class="social-footer">
-        <a href="https://www.linkedin.com/in/geechristina"><i class="fa fa-linkedin"></i></a>
-        <!--<a href="https://wordpress.com/posts/christinargee.wordpress.com"><i class="fa fa-wordpress"></i></a> -->
-        <a href="https://www.twitter.com/christinagee12"><i class="fa fa-twitter"></i></a>
-      </div>
+        <!--<a href="https://www.facebook.com/thomsooncom"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.behance.net/TomaszMazurczak"><i class="fa fa-behance"></i></a>-->
 
       </div>
-      <!--<div class="copyright">Site created by Christina Gee </div>!-->
-
-
-
+      <div class="copyright"> Site template by: Thomsoon.com © Copyright 2015. All Rights Reserved.</div>
     </div>
 
 
   </footer>
-
 
 
 <!--Scripts-->
@@ -179,12 +196,12 @@
 
   <script src="js/script.js" type="text/javascript"></script>
 
-  <!-- <script>
-    $('#button').on('click', function() {
+  <script>
+    $('#button, #buttons').on('click', function() {
       $( ".opacity-nav" ).fadeToggle( "slow", "linear" );
     // Animation complete.
     });
-  </script> -->
+  </script>
 
 
 </body>
